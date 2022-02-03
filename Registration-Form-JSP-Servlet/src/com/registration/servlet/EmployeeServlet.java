@@ -23,7 +23,6 @@ public class EmployeeServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
-
 		int registerEmployeeId = 0;
 
 		String firstName = request.getParameter("firstname");
@@ -56,6 +55,7 @@ public class EmployeeServlet extends HttpServlet {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
 			requestDispatcher.forward(request, response);
 		}
+		  response.sendRedirect("index.jsp");
 	}
 
 }
